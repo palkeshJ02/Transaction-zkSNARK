@@ -1,0 +1,31 @@
+# Transaction Correctness zk-SNARK Proof
+
+## Project Structure
+
+- `transaction.circom`: The main Circom circuit implementing the transaction constraints and Poseidon hashing.
+
+
+- `generate_inputs.js`: A Node.js script that computes the Poseidon hashes of the test balances and generates the `input.json` file.
+
+
+- `run.sh`: An automated bash script that compiles the circuit, generates the witness, performs the trusted setup, and verifies the proof.
+
+
+- `package.json`: Contains the Node.js dependencies (`circomlib`, `circomlibjs`, and `snarkjs`).
+
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed and configured on your system:
+
+1. **Node.js & npm**
+2. **Rust & Cargo**
+3. **Circom Compiler**
+
+## Demo steps: 
+   chmod +x test.sh
+   ./test.sh
+
+# If the test on different balances of Alice and Bob, and transfer amounts is required, check out the generate_input.js file. 
+
+Currently, it is set for  Alice (100) and Bob (50) balances with transfer amount 20. 
